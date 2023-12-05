@@ -1,0 +1,77 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.24774292587777075 -0.2793721105756959 -0.9276716372240785 1.5162739098553886
+  position -0.4709428094866204 0.11544945280091491 -0.1184123587496309
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 1.5 2.5
+  floorAppearance Appearance {
+    material Material {
+    }
+  }
+}
+E-puck {
+  hidden position_0_0 6.191095458605323e-08
+  hidden position_0_1 6.19109985110146e-08
+  hidden rotation_1 0 1 0 5.960464477539063e-08
+  hidden rotation_2 0 1 0 5.960464477539063e-08
+  translation -0.39978400000424197 -0.1929409997992289 -6.396196893068175e-05
+  rotation -5.655947001343932e-07 5.561633706057645e-07 0.9999999999996853 1.5919217663982166
+  controller "robot_controller_python"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation -0.04 0.003 0
+      rotation 0 1 0 1.5708003061004252
+      name "ir3"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation -0.04 -0.006 0
+      rotation 0 1 0 1.5707996938995747
+      name "ir2"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 -0.006 0
+      rotation 0 1 0 1.5707996938995747
+      name "ir0"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 0.003 0
+      rotation 0 1 0 1.5708003061004252
+      name "ir1"
+      type "infra-red"
+    }
+  ]
+}
+Solid {
+  translation -0.004 0.06 0
+  scale 0.005 0.005 0.005
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0 0 0
+        }
+      }
+      geometry Mesh {
+        url [
+          "tinker.obj"
+        ]
+      }
+    }
+  ]
+}
